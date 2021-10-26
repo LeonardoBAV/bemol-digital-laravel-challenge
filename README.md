@@ -19,7 +19,7 @@ TESTE
 http://localhost/api/bemoldigitallaravelchallenge/
 ```
 ## Front-End Instalação
-
+A partir da pasta root da instalação do Laravel executa os comandos abaixo:
 ```sh
 cd Modules/Bemoldigitallaravelchallenge/Presentation/Angular/ 
 npm install 														
