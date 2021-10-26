@@ -36,3 +36,4 @@ Observações
 - Projeto para gerenciamento de cliente/usuário
 - Projeto segue estrutura de uma arquitetura DDD
 - Projeto Angular que consome a API esta embutido neste repositório
+- Projeto desenvolvido no lubuntu versão 21.10
