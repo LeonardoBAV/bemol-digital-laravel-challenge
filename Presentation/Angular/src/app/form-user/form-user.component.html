@@ -1,0 +1,96 @@
+
+<form [formGroup]="form" (ngSubmit)="save()">
+<mat-card>
+    <mat-card-title>Cadastrar/Editar Cliente</mat-card-title>
+    <mat-card-content>
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="hasError('name', 'required')">Campo é obrigatório</mat-error>
+        <mat-error *ngIf="hasError('name', 'maxlength')">Máximo de caracter permitido é 150</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput formControlName="email">
+        <mat-error *ngIf="hasError('email', 'required')">Campo é obrigatório</mat-error>
+        <mat-error *ngIf="hasError('email', 'maxlength')">Máximo de caracter permitido é 150</mat-error>
+        <mat-error *ngIf="hasError('email', 'email')">Formtação de email incorreto</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput formControlName="password">
+        <mat-error *ngIf="hasError('password', 'required')">Campo é obrigatório</mat-error>
+        <mat-error *ngIf="hasError('password', 'minlength')">Mínimo de caracter permitido é 6</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Telefone</mat-label>
+        <input type="text" matInput formControlName="phone" mask="(00)00000-0000">
+        <mat-error *ngIf="hasError('phone', 'minlength')">Mínimo de dígitos permitido é 9</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>CPF</mat-label>
+        <input type="text" matInput formControlName="cpf" mask="000.000.000-00">
+        <mat-error *ngIf="hasError('phone', 'minlength')">Mínimo de dígitos permitido é 11</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nascimento</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birth">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="hasError('birth', 'required')">Campo é obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>CEP</mat-label>
+        <input type="text" matInput formControlName="postcode" mask="00.000-000" (keyup)="checkPostCode($event)">
+        <mat-error *ngIf="hasError('postcode', 'minlength')">Mínimo de dígitos permitido é 8</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Estado</mat-label>
+        <input matInput formControlName="st">
+        <mat-error *ngIf="hasError('st', 'minlength')">Mínimo de caracter permitido é 2</mat-error>
+        <mat-error *ngIf="hasError('st', 'maxlength')">Máximo de caracter permitido é 2</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Cidade</mat-label>
+        <input matInput formControlName="city">
+        <mat-error *ngIf="hasError('city', 'maxlength')">Máximo de caracter permitido é 150</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Bairro</mat-label>
+        <input matInput formControlName="neighborhood">
+        <mat-error *ngIf="hasError('neighborhood', 'maxlength')">Máximo de caracter permitido é 150</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Rua</mat-label>
+        <input matInput formControlName="street">
+        <mat-error *ngIf="hasError('street', 'maxlength')">Máximo de caracter permitido é 150</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Número</mat-label>
+        <input type="number" matInput formControlName="number">
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width" appearance="outline" *ngIf="passwordVisibledShow">
+        <mat-label>Senha Cadastrada</mat-label>
+        <input matInput formControlName="passwordVisibled">
+    </mat-form-field>
+
+
+</mat-card-content>
+<mat-card-actions>
+  <button mat-raised-button  (click)="back()">Voltar</button>
+  <button type="submit" [disabled]="!form.valid" mat-raised-button color="primary" >Salvar</button>
+</mat-card-actions>
+</mat-card>  
+</form>

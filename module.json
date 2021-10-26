@@ -1,0 +1,13 @@
+{
+    "name": "BemolDigitalLaravelChallenge",
+    "alias": "bemoldigitallaravelchallenge",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\BemolDigitalLaravelChallenge\\Application\\Providers\\BemolDigitalLaravelChallengeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
