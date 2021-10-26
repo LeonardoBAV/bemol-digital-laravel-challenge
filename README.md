@@ -3,6 +3,7 @@
 ## Requisitos
 - docker
 - curl
+- npm
 
 ## Back-End Instalação
 É importante que a porta 80 esteja liberada, pois por padrão o sail utiliza o docker para rodar nesta porta
