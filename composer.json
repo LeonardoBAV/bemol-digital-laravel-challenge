@@ -1,10 +1,10 @@
 {
-    "name": "nwidart/bemoldigitallaravelchallenge",
+    "name": "Leonardobav/bemoldigitallaravelchallenge-module",
     "description": "",
     "authors": [
         {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
+            "name": "Leonardo Borges Athayde Vasconcelos",
+            "email": "leobav1988@gmail.com"
         }
     ],
     "extra": {
@@ -19,5 +19,12 @@
         "psr-4": {
             "Modules\\BemolDigitalLaravelChallenge\\": ""
         }
+    },
+    "type": "laravel-module",
+    "require": {
+        "nwidart/laravel-modules": "^8.2",
+        "joshbrw/laravel-module-installer": "^2.0",
+        "guzzlehttp/guzzle": "^7.4",
+
     }
 }
