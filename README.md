@@ -23,9 +23,9 @@ http://localhost/api/bemoldigitallaravelchallenge/
 
 ```sh
 cd Modules/Bemoldigitallaravelchallenge/Presentation/Angular/ 
-npm install 														(mas talvez aqui ja instala o angular automaticamente)
-npm install -g @angular/cli										(talvez nem precise)
-ng serve (precisa baixar o cli angular)
+npm install 														
+npm install -g @angular/cli									
+ng serve
 ```
 ACESSAR
 ```sh
@@ -36,4 +36,3 @@ Observações
 - Projeto para gerenciamento de cliente/usuário
 - Projeto segue estrutura de uma arquitetura DDD
 - Projeto Angular que consome a API esta embutido neste repositório
- 
