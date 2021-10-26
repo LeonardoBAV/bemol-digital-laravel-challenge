@@ -9,11 +9,10 @@
 ```sh
 curl -s https://laravel.build/example-app | bash
 cd example-app
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-sail up -d
-sail composer require leonardobav/bemoldigitallaravelchallenge-module
-sail artisan module:enable
-sail artisan migrate
+./vendor/bin/sail up -d
+./vendor/bin/sail composer require leonardobav/bemoldigitallaravelchallenge-module
+./vendor/bin/sail artisan module:enable
+./vendor/bin/sail artisan migrate
 ```
 TESTE
 ```sh
