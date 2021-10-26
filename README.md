@@ -1,4 +1,4 @@
-# Back End Laravel
+# Desafio Back End Laravel
 
 Este é um projeto laravel, que tem como desafio a implementação de uma API para o gerenciamento de Clientes/Usuários.
 
@@ -8,7 +8,7 @@ Este é um projeto laravel, que tem como desafio a implementação de uma API pa
 - docker
 - curl
 
-É importante que a porta 80 esteja liberada, pois por padrão o sail utiliza o docker para rodar nesta porta.
+É importante que a porta 80 esteja liberada, pois por padrão o sail utiliza o docker para rodar nesta porta. Para a instalção siga os comandos abaixo:
 
 ```sh
 curl -s https://laravel.build/example-app | bash
@@ -18,6 +18,16 @@ cd example-app
 ./vendor/bin/sail artisan module:enable
 ./vendor/bin/sail artisan migrate
 ```
+
+- Descrição do que cada comando realiza
+    - 1- Download da versão limpa do Laravel
+    - 2- Entrar na pasta raiz do projeto
+    - 3- Inicializar os containers pelo  Laravel Sail
+    - 4- Instalar o projeto do desafio via composer
+    - 5- Ativar modulo do projeto
+    - 6- Subir com a estrutura do banco de dados
+
+
 #### Teste
 ```sh
 http://localhost/api/bemoldigitallaravelchallenge/
