@@ -25,8 +25,8 @@ http://localhost/api/bemoldigitallaravelchallenge/
 
 ### Observações
 Este projeto é um pacote larável que pode ser instalado também utilizando o camando:
-```bash
-$ composer require leonardobav/bemoldigitallaravelchallenge-module
+```sh
+composer require leonardobav/bemoldigitallaravelchallenge-module
 ```
 
 - Pacotes Utilizados:
