@@ -1,0 +1,51 @@
+workspace {
+
+    model {
+        
+        user = person "Cliente/Admin" "Usuário do sistema que pode gerenciar diferentes contas de cliente da Bemol"
+        softwareSystem = softwareSystem "Sistema Bemol" {
+            webapp = container "Sistema Web" "Interação da Bemol com os Clientes" "Laravel + Angular" {
+                user -> this "Vizualizar contas, gerenciar contas de clientes"
+            }
+            
+            spa = container "SPA Sistema" "Forneça toda a interação do Cliente com a Bemol via Web Browser" "Angular + Typescript + Material + UI Bootstrap"{
+                webapp -> this "Entrega do sistema via Web Browser"
+            }
+            
+            api = container "API" "Forneça toda a interação do Cliente com a Bemol via Web Browser" "Laravel"{
+                spa -> this "Integração via REST" "json/http"
+                
+            }
+                
+        
+            
+            db = container "Base de Dados" "Armazenas as informações das contas dos Clientes" "Mysql"{
+                api -> this "Leitura e Escrita de dados" "PDO"
+            }
+        }
+        
+        
+        
+    }
+    
+
+    views {
+        systemContext softwareSystem {
+            include *
+            autolayout lr
+        }
+
+        container softwareSystem {
+            include *
+            autolayout lr
+        }
+        
+        component api {
+            include *
+            autolayout lr
+        }
+
+        theme default
+    }
+
+}
