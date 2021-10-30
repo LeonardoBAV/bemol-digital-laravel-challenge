@@ -8,7 +8,7 @@ Este é um projeto laravel, que tem como desafio a implementação de uma API pa
 - docker
 - curl
 
-É importante que a porta 80 esteja liberada, pois por padrão o sail utiliza o docker para rodar nesta porta. Para a instalção siga os comandos abaixo:
+É importante que a porta 80 esteja liberada, pois por padrão o sail utiliza o docker para rodar nesta porta. Para a instalação siga os comandos abaixo:
 
 ```sh
 curl -s https://laravel.build/example-app | bash
